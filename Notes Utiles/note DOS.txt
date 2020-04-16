@@ -1,0 +1,14 @@
+set /p          #définition d'une variable
+set /p var1= Veuillez entrer la variable 1:
+echo %var1%     #Appel de la variable 1
+echo.           #retour à la ligne
+set /a #        #Définit variable arithmetique
+timeout = ping localhost
+time out /T 5 /nobreak
+Ping localhost -n 5>nul
+netsh advfirexwall set allprofiles state on/off
+/? Aide
+mkdir(ou md)    #création répertoire
+rmdir           #Efface le dossier
+dir             #Lister le contenu
+cd              #Changer de repertoire
