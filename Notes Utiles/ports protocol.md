@@ -30,7 +30,13 @@
 * UDP 	1701 	L2TP (Virtual Private Networks)  
 * TCP 	1723 	PPTP (Virtual Private Networks)  
 * ___   3306  MYSQL
+# Classe d'adresses
 
+* A   1 > 127/8
+* B   128 > 191/16
+* C   192 > 223/24
+* D   224 > 239
+* E   240 > 255
 # Private and Automatic IP Address Ranges
 * A 	10.0.0.0 to 10.255.255.255 (10.0.0.0/8)  
 * B 	172.16.0.0 to 172.31.255.255 (172.16.0.0/12)  
