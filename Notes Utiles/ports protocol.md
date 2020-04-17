@@ -1,5 +1,5 @@
 # Common IP Protocols
-* 1 	ICMP (ping)  
+*   	ICMP (ping)  
 * 6 	TCP  
 * 17 	UDP  
 * 47 	GRE (PPTP)  
@@ -7,23 +7,27 @@
 * 51 	AH (IPSec)  
 
 # Common TCP and UDP Ports
-* TCP 	20 	FTP data  
-* TCP 	21 	FTP control  
+* TCP 	20 	FTP échange de fichiers via FTP (data)  
+* TCP 	21 	FTP échange de fichiers via FTP (control)
+*       22, pour l'accès à un shell sécurisé Secure SHell, également utilisé pour l'échange de fichiers sécurisés SFTP
 * TCP 	23 	Telnet  
 * TCP 	25 	SMTP (E-mail)  
-* TCP/UDP 	53 	DNS query  
-* UDP 	67/68 	DHCP (Dynamic IP address configuration)  
+* TCP/UDP 	53 	DNS résolution de noms de domaine en adresses IP
+* UDP 	67/68 	DHCP (Dynamic IP address configuration)
+*       69   pour le TFTP
 * TCP 	80 	HTTP (Web)
 * ___   88  KERBEROS
 * TCP 	110 	POP3 (E-mail)  
 * TCP 	119 	NNTP (Newsgroups)
-* ___   1723  NTP   
+* ___   123   NTP synchronisation de l'horloge : Network Time Protocol   
 * TCP 	143 	IMAP4 (E-mail)  
 * TCP 	389 	LDAP (Directory service)  
 * TCP 	443 	HTTPS (Web SSL)
 * ___   465   SMTPS
+* ___   500   port utilisé pour le canal d'échange de clés IPsec
 * ___   520   RIP
 * ___   530   RPC
+* ___   636   Utilisation d'une connexion à un LDAP sécurisé par une couche SSL/TLS
 * ___   853   DNS SEC
 * ___   989   FTPS (Transfert)
 * ___   990   FTPS (Control)  
