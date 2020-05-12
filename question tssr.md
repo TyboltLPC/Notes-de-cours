@@ -20,4 +20,9 @@
   + invoke-rc.d openvpn restart
 
 ## POWERSHELL :
++ ctrl=espace > proposition
 + syntaxe > verbe+nom+option et valeur
++
+
+
+test test
