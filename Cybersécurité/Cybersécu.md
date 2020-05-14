@@ -35,6 +35,15 @@ Elément qui traduise une introduction system (nom de domaine, ip).
 + [Alienvault](https://otx.alienvault.com)
 + [Threatcrow](https://www.threatcrowd.org)
 + [OSINTFramework](https://osintframework.com)
-### OUtils
++ [Robtex](https://www.robtex.com)
+
+### Outils
 + tor + proxychains
 + dnsrecon
+
+### Les Phases:
+sources: http://www.pentest-standard.org/index.php/PTES_Technical_Guidelines
++ Recon (Intelligence gathering, reconnaissance): peut être active ou passive
+  + Active > Prise d'empreinte: pare feu, service web (version), VOIP
+  + Passive > Sniffing
++ Analyse vulnerability, anticipation des schéma de défense
