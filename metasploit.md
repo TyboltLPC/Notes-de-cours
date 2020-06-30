@@ -7,3 +7,5 @@
 ## msfconsole
 
 ## workspace
+
+setg (setting global)
