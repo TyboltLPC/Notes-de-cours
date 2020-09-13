@@ -1,5 +1,6 @@
 # GIT
----
+___
+___
 ## Cloner repo
 - copier/coller soit le https soit le ssh sur le site github (crer le repo dans le dossier actuel !!!)
 - Télécharger et dezipper le repo à l'endroit souhaité
@@ -22,8 +23,8 @@
 ## Connection ssh
 
 - se placer dans /home/user/.shh
-- ssh-keygen        #genere cle de base, voir les options pour plus
+    ssh-keygen        #genere cle de base, voir les options pour plus
 - choisir un nom et une passphrase (ou pas)
 - deux fichiers créer XXXX et XXXX.pub (clé privé et publique)
-- afficher la .pub avec cat ~/.ssh/XXXX.pub
+- afficher la .pub avec `cat ~/.ssh/XXXX.pub`
 - Copier cette clé sur github/Setting/key SSH
