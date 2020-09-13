@@ -1,5 +1,5 @@
 # GIT
-====
+---
 ## Cloner repo
 - copier/coller soit le https soit le ssh sur le site github (crer le repo dans le dossier actuel !!!)
 - Télécharger et dezipper le repo à l'endroit souhaité
