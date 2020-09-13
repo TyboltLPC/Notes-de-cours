@@ -1,11 +1,12 @@
 # METASPLOIT
+___
+___
+## Start
+- `service postgresql start`  #start le service
+- `msfdb init`
+- `msfconsoleè
 
-## service postgresql start
-
-## msfdb init
-
-## msfconsole
-
-## workspace
-
-setg (setting global)
+## workspaces
+`workspace`
+## config global
+`setg` 
