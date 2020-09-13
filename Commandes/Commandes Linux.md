@@ -1,5 +1,6 @@
 # **Commandes LiNUX**
-
+___
+___
 ## Autocompletion ignorer case
 `nano /etc/inputrc`
 coller "set completion-ignore-case on"
@@ -31,7 +32,8 @@ Pour extraire une archive tar.gz, tapez :
 
 `tar xvzf mon_archive.tar.gz`
 
-
+## Gunzip/gzip
+`gzip -d <.zip>`
 
 ## DD
 
