@@ -4,7 +4,7 @@ ___
 ## Start
 - `service postgresql start`  #start le service
 - `msfdb init`
-- `msfconsoleè
+- `msfconsole`
 
 ## workspaces
 `workspace`
