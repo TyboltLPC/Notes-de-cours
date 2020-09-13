@@ -18,3 +18,13 @@
 - git commit -m <message de MAJ>
 - git push 		   #Pousse les changements
 
+
+## Connection ssh
+
+- se placer dans /home/user/.shh
+- ssh-keygen        #genere cle de base, voir les options pour plus
+- choisir un nom et une passphrase (ou pas)
+- deux fichiers créer XXXX et XXXX.pub (clé privé et publique)
+- afficher la .pub avec cat ~/.ssh/XXXX.pub
+- Copier cette clé sur github/Setting/key SSH
+- 
