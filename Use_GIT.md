@@ -28,3 +28,7 @@ ___
 - deux fichiers créer XXXX et XXXX.pub (clé privé et publique)
 - afficher la .pub avec `cat ~/.ssh/XXXX.pub`
 - Copier cette clé sur github/Setting/key SSH
+
+## Other
+
+- `git config commit.gpgSign false` *disable gpg sign
