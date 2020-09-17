@@ -1,7 +1,8 @@
 # jour7
 ___
 ___
-
+## Sources:
+- https://doc.emergingthreats.net/bin/view/Main/SidAllocation Sid Allocation
 ## SELKS
 connexion ssh selks-user@172.16.12.99  
 connexion web https://172.16.12.99
@@ -28,7 +29,7 @@ connexion web https://172.16.12.99
 + MSG :message inscrit à l'écran
 + Flux          :on zappe
 + Option du lux :on zappe
-+ Content :ce que ça contient
++ Content :ce que ça contient qui match
++ reference :donne des infos
 + sid
 + rev (numéro de version des régles)
-+
