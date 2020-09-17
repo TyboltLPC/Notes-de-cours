@@ -1,0 +1,30 @@
+# PRIMARY RULES
+
+
+#surveillance des outils windows sur le réseau
+
+alert tcp any any -> any any (msg:"administration activity";content:"wmic";flow:established;nocase;sid:10000001;rev:1;)
+
+
+#Curl User-Agent detection on intranet
+
+alert http $HOME_NET any -> $HOME_NET any (msg:" INTRANET POLICY USER-AGENT CURL SUSPICIOUS"; flow:established,to_server; http.user_agent; content:"curl"; classtype:targeted-activity; sid:10000002; rev:1;)
+
+# DDOS MZ 
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"DDOS tools massive flow";content:"mz"; flow:established,to_server;sid:10000018;rev:1;)
+
+
+# SECONDARY RULES 
+
+# scenario PrepOSCP
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET 25 (msg:"Target Email Detected Specific - MICHEL HENTON); content:"michelrock68@yahoo.com"; nocase; classtype:target-mail-detected ;sid:100000004 ;rev:1)
+
+# scenario Photograher
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET [139,445] (msg: ILLEGAL ACCES SMB); content:"smbclient"; nocase; classtype:misc-admin; sid:10000002; rev:1)
+
+# scenario Forensics
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET [80,443] (msg: Sar2HTML 3.2.1 - Remote Command Execution); uricontent:"/index.php?plot=;" depht:16; nocase; classtype:remote-code-execution ; sid:10000003; rev:1)
