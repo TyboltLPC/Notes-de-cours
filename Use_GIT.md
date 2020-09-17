@@ -13,7 +13,8 @@ ___
 ## Commandes de base
     git status	       #check les diffs
     git add -A	       #prend en compte tous
-    git pull		   # synchro les diffs
+    git add .          #prend en charge le dossier courant
+    git pull           # synchro les diffs
 
 ## Commandes d'action
     git commit -m <message de MAJ>

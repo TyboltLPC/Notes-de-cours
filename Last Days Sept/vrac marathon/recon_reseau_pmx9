@@ -1,0 +1,135 @@
+Jour 1
+
+Installation de wiregard
+reception du fichier de configuration du vpn pour accès a l'hyperviseur 9
+mise en place de la configuration
+connexion au reseau 10.0.19.0/24 wg-quick up wg9
+
+connexion au pmx9 https://pmx9.analystlpc.tech:8006
+lancement de kalipentest et maj
+lancement de toute les machines 
+ip a pour verifier les ips sur le proxmox et la kali
+
+recon :
+
+nmap 10.0.19.0/24 --vv
+
+Initiating Parallel DNS resolution of 1 host. at 10:22
+Completed Parallel DNS resolution of 1 host. at 10:22, 0.00s elapsed
+Initiating SYN Stealth Scan at 10:22
+Scanning 2 hosts [1000 ports/host]
+Discovered open port 22/tcp on 10.0.19.1
+Discovered open port 25/tcp on 10.0.19.1
+Discovered open port 111/tcp on 10.0.19.1
+Discovered open port 9100/tcp on 10.0.19.1
+Discovered open port 3128/tcp on 10.0.19.1
+Completed SYN Stealth Scan against 10.0.19.1 in 0.26s (1 host left)
+Discovered open port 3389/tcp on 10.0.19.3
+Discovered open port 111/tcp on 10.0.19.3
+Increasing send delay for 10.0.19.3 from 0 to 5 due to 151 out of 503 dropped probes since last increase.
+Discovered open port 631/tcp on 10.0.19.3
+Completed SYN Stealth Scan at 10:22, 5.32s elapsed (2000 total ports)
+Nmap scan report for 10.0.19.1
+Host is up, received echo-reply ttl 64 (0.010s latency).
+Scanned at 2020-09-07 10:22:15 CEST for 4s
+Not shown: 995 closed ports
+Reason: 995 resets
+PORT     STATE SERVICE    REASON
+22/tcp   open  ssh        syn-ack ttl 64
+25/tcp   open  smtp       syn-ack ttl 64
+111/tcp  open  rpcbind    syn-ack ttl 64
+3128/tcp open  squid-http syn-ack ttl 64
+9100/tcp open  jetdirect  syn-ack ttl 64
+
+Nmap scan report for 10.0.19.3
+Host is up, received echo-reply ttl 63 (0.016s latency).
+Scanned at 2020-09-07 10:22:15 CEST for 9s
+Not shown: 997 closed ports
+Reason: 997 resets
+PORT     STATE SERVICE       REASON
+111/tcp  open  rpcbind       syn-ack ttl 63
+631/tcp  open  ipp           syn-ack ttl 63
+3389/tcp open  ms-wbt-server syn-ack ttl 63
+
+Initiating SYN Stealth Scan at 10:22
+Scanning 10.0.19.2 [1000 ports]
+Discovered open port 111/tcp on 10.0.19.2
+Completed SYN Stealth Scan at 10:22, 0.05s elapsed (1000 total ports)
+Nmap scan report for 10.0.19.2
+Host is up, received localhost-response (0.0000030s latency).
+Scanned at 2020-09-07 10:22:24 CEST for 0s
+Not shown: 999 closed ports
+Reason: 999 resets
+PORT    STATE SERVICE REASON
+111/tcp open  rpcbind syn-ack ttl 64
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 256 IP addresses (3 hosts up) scanned in 9.66 seconds
+           Raw packets sent: 5675 (237.496KB) | Rcvd: 4014 (164.988KB)
+   
+nmap 172.16.29.0/24 --vv  ==> fichier texte kalipentest
+
+root@kalipentest:/home/kalif# nmap -sn 172.16.0.0/12
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-09-07 12:22 CEST
+Nmap scan report for 172.16.1.1
+Host is up (0.0013s latency).
+Nmap scan report for 172.16.19.1
+Host is up (0.00018s latency).
+Nmap scan report for 172.16.19.99
+Host is up (0.00062s latency).
+Nmap scan report for 172.16.19.100
+Host is up (0.00030s latency).
+Nmap scan report for 172.16.29.1
+Host is up (0.00025s latency).
+MAC Address: 4A:DE:20:2F:6D:2B (Unknown)
+Nmap scan report for 172.16.29.98
+Host is up (0.00032s latency).
+MAC Address: A2:71:57:A0:5E:4B (Unknown)
+Nmap scan report for 172.16.29.100
+Host is up (0.00027s latency).
+MAC Address: 9A:57:38:60:98:61 (Unknown)
+Nmap scan report for 172.16.29.101
+Host is up (0.00023s latency).
+MAC Address: 6E:EB:D0:57:28:D9 (Unknown)
+Nmap scan report for 172.16.29.102
+Host is up (0.00084s latency).
+MAC Address: 02:70:79:58:55:18 (Unknown)
+Nmap scan report for 172.16.29.103
+Host is up (0.00079s latency).
+MAC Address: F2:F3:44:F0:4E:C0 (Unknown)
+Nmap scan report for 172.16.29.105
+Host is up (0.00058s latency).
+MAC Address: 52:22:91:C1:A8:36 (Unknown)
+Nmap scan report for 172.16.29.104
+Host is up.
+
+root@kalipentest:/home/kalif# nmap -sn 10.0.0.0/8
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-09-07 12:34 CEST
+Nmap scan report for 10.0.19.1
+Host is up (0.000089s latency).
+Nmap scan report for 10.0.19.2
+Host is up (0.090s latency).
+Nmap scan report for 10.0.19.3
+Host is up (0.064s latency).
+Nmap scan report for 10.0.99.248
+Host is up (0.0043s latency).
+Nmap scan report for 10.0.99.249
+Host is up (0.0041s latency).
+Nmap scan report for 10.0.99.250
+Host is up (0.0044s latency).
+
+
+
+
+schéma réseau architecture du proxmox sur draw.io 
+
+tableau d'analyse de risque
+
+connexion ssh sur le serveur web et localisation des logs /etc/log/syslog
+
+reinitialisation selks sur terminal par ssh
+
+
+
+
+
