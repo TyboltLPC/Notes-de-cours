@@ -1,5 +1,5 @@
 #intranet_curl.rules
-
 #Curl User-Agent detection on intranet
-#regle de detection des commandes curl
+#regle de détection des commandes curl
+
 alert tcp any  any -> $HOME_NET [80,443] (msg:"CURL ProoF ICIVU"; flow:established,to_server; http.user_agent; content:"curl"; classtype:targeted-activity; sid:10000001; rev:1;)
